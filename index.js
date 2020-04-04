@@ -46,12 +46,14 @@ app.get('/products', (req, res)=>{
 }),
 
 
-app.get('/users/:id',(req, res)=>{
+app.get('/product/:id',(req, res)=>{
     const id = req.params.id;
+    
     const name = users[id];
     res.send({id, name});
 })
-
+//delete
+//update
 //post
 app.post('/addProduct',(req, res)=>{
     const product = req.body;
